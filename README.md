@@ -24,3 +24,12 @@ docker run --rm -p 8080:80 lazermazer
 ## Deploy
 
 This repo is static and can be deployed to any static host, including GitHub Pages, Netlify, Vercel, nginx, Caddy, or the included Docker image.
+
+On `alexli.ca`, Caddy serves `/opt/lazermazer` directly. That means normal deploys are just a `git pull`:
+
+```bash
+cd /opt/lazermazer
+./deploy/deploy.sh
+```
+
+No Docker rebuild or Caddy restart is needed for ordinary HTML, CSS, JS, image, map, font, or audio changes.
